@@ -10,7 +10,13 @@ class BookItem(models.Model):
     borrowed = models.DateField()
     dueDate = models.DateField()
     price = models.FloatField()
-    format = models.CharField(max_length=50)
+    #format = models.CharField(max_length=50)
+    status = models.CharField(max_length=50)
+    deleteOfPurchase = models.DateField()
+    publicationDate = models.DateField()
+
+    def chekout():
+        return True
 
 class Address(models.Model):
     streetAdress = models.TextField()
